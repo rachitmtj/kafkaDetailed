@@ -2,8 +2,7 @@ package com.rachit.examples.avroexamples;
 
 import java.util.*;
 import org.apache.kafka.clients.producer.*;
-
-public class AvroProducer {
+public class AvroProducerV2 {
 
     public static void main(String[] args) throws Exception{
 
@@ -22,6 +21,9 @@ public class AvroProducer {
             cr.setSessionId("10001");
             cr.setChannel("HomePage");
             cr.setIp("192.168.0.1");
+            cr.setLanguage("Spanish");
+            cr.setOs("Mac");
+            cr.setEntryUrl("http://facebook.com/myadd");
 
             producer.send(new ProducerRecord<String, ClickRecord>(topicName,cr.getSessionId().toString(),cr)).get();
 

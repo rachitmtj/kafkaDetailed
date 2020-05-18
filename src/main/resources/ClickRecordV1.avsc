@@ -1,5 +1,6 @@
 { "type": "record",
   "name": "ClickRecord",
+  "namespace" : "com.rachit.examples.avroexamples",
   "fields": [
      {"name": "session_id", "type": "string"},
      {"name": "browser", "type": ["string", "null"]},
